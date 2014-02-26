@@ -9,7 +9,7 @@ module Barrister
     class Container
 
       def initialize(json_path, mount_path, handlers, port=4567, host='localhost')
-        my_app = ::Sinatra.new do
+        @my_app = ::Sinatra.new do
           set :bind, host
           set :port, port
 
@@ -30,8 +30,10 @@ module Barrister
             resp
           end
         end
+      end
 
-        my_app.run!
+      def start
+        @my_app.run!
       end
 
     end
