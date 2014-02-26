@@ -2,6 +2,24 @@
 
 A Sinatra container for services using Barrister RPC framework
 
+## Usage
+
+Instantiating a Sinatra container is easy:
+
+```ruby
+
+json_path  = './user_service.json'
+mount_path = '/user_service'
+handlers   = [UserService]
+
+container = Barrister::SinatraContainer.new json_path, mount_path, handlers
+container.start
+
+```
+
+Calling the 'start' method of an instantiated SinatraContainer will start the
+underlying HTTP server and Sinatra application.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -15,10 +33,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install barrister-sinatra
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
