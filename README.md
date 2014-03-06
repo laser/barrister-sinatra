@@ -6,6 +6,12 @@ A Sinatra container for services using Barrister RPC framework
 
 First, check out Barrister RPC here: http://barrister.bitmechanic.com
 
+## Reference Implementation
+
+For a working reference implementation of a Rails UI consuming services
+running inside a SinatraContainer using the HttpTransport, see:
+https://github.com/laser/ruby-micro-services-http
+
 ## Usage
 
 Instantiating a Redis container is easy. By default, the container 
@@ -49,11 +55,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install barrister-sinatra
-    
-## Reference Implementation
-
-To see a working implementation of a SinatraContainer being used in conjunction
-with a Rails UI, see https://github.com/laser/ruby-micro-services-redis
 
 ## Contributing
 
